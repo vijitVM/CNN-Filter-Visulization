@@ -19,3 +19,22 @@
 <img width="250" src = "Images/Filters.gif">
 </p>
 
+## Pre Trained Model 
+We will be using the VGG16 Model and the basic way to load the entire model is as follows: 
+
+```python
+# Import the required Libraries
+import tensorflow as tf 
+import math
+import numpy
+import matplotlib.pyplot as plt
+
+# Load the VGG16 Model 
+model = tf.keras.applications.vgg16.VGG16(
+    include_top = False, # Final Fully connected layers in CNN not inclued in the model
+    weights ='imagenet', # CNN model trained on the given weights
+    input_shape =(96,96,3) # 96 rows and columns and 3 channels
+)
+model.summary()
+
+
