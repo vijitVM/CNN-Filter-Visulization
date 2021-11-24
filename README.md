@@ -91,3 +91,13 @@ _________________________________________________________________
 The above summary of the VGG16 Model shows the Input layer and the outup shape of each layer and the total number of parameters. In VGG16 each block comprises of  multiple 2D conv layer followed by a max pooling layer. 
 
 The max pooling layer in CNN basically it selects the maximum value from the feature map that is covered inside a filter. Each CNN Layer can be accessed using the `layer.name` property. This will yield the output `block#_conv#` where `#` refers to an interger value. 
+
+The second Step now would be use only specific layers in the VGG16 models in simple words we would create a submodel as follows: 
+```python
+def get_submodel(name):
+  return tf.keras.models.Model(
+      model.input, 
+      model.get_layer(name).output)
+
+get_submodel('block2_conv1').summary()
+```
