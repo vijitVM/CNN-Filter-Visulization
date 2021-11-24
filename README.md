@@ -215,4 +215,4 @@ Iteration: 500, Loss : 1.477086
 <img width="250" src = "Visulization/block1_conv1_filter27.png">
 </p>
 
-Each time we re run the Algorithm a new random Image will be generated in the form of `block#_conv#_filter#` where `#` refers to an ineger value.
+Each time we re run the Algorithm a new random Image will be generated in the form of `block#_conv#, filter_num` where `#` refers to an integer value and `filter_num` would be the filter number as an integer value. 
