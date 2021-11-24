@@ -212,5 +212,5 @@ Iteration: 490, Loss : 1.455404
 Iteration: 500, Loss : 1.477086
 ```
 <p align="center">
-<img width="250" src = "Visulized/block1_conv1_filter27.png">
+<img width="250" src = "Visulization/block1_conv1_filter27.png">
 </p>
