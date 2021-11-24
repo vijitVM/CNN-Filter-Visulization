@@ -36,5 +36,55 @@ model = tf.keras.applications.vgg16.VGG16(
     input_shape =(96,96,3) # 96 rows and columns and 3 channels
 )
 model.summary()
-
-
+```
+## How would we visulize the pre trained Model ?
+The first step is to see how the VGG16 Model looks like and then we can decide what we want to work with. 
+```
+Model: "vgg16"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 96, 96, 3)]       0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 96, 96, 64)        1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 96, 96, 64)        36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 48, 48, 64)        0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 48, 48, 128)       73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 48, 48, 128)       147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 24, 24, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 24, 24, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 24, 24, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 24, 24, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 12, 12, 256)       0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 12, 12, 512)       1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 12, 12, 512)       2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 12, 12, 512)       2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 6, 6, 512)         0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 3, 3, 512)         0         
+                                                                 
+=================================================================
+Total params: 14,714,688
+Trainable params: 14,714,688
+Non-trainable params: 0
+_________________________________________________________________
+```
