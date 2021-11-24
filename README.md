@@ -117,3 +117,36 @@ def plot(image, title ='Random Generated Image'):
   plt.show()
 
 ```
+
+## What is the Algorithm that will be used ?
+For this purpose I'll be utilising the Gradient Ascent Algorithm. The main aim of this algorithm is to maximize the loss values and thus inturn this will help the neural network  learn more improved features.  This can be done as follows: 
+
+```python 
+def filter_visulise(layer_name, filter_index =None, max_iters = 500):
+  submodel =get_submodel(layer_name)
+  num_filters = submodel.output.shape[-1]
+
+  if filter_index is None:
+    filter_index =tf.experimental.numpy.random.randint(0,num_filters -1)
+  assert num_filters > filter_index, 'Filer_index is out of bonds'
+
+  image =create_image()
+  loss_step =int(max_iters / 50)
+  
+  # Gradient Ascent 
+  for i in range(0,max_iters):
+    with tf.GradientTape() as tape:
+      tape.watch(image)
+      out = submodel(tf.expand_dims(image,axis=0))[:,:,:,filter_index]
+      loss = tf.math.reduce_mean(out)
+    gradient = tape.gradient(loss,image)
+    gradient =tf.math.l2_normalize(gradient)
+    image = image + gradient * 0.1 
+
+    if (i + 1) % loss_step == 0:
+      print(f'Iteration: {i + 1}, Loss : {loss.numpy():4f}')
+
+
+  plot(image, f'{layer_name},{filter_index}')
+  ```
+
