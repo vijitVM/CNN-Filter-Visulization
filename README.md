@@ -16,6 +16,6 @@
 
 <p> A neural Netowrk model can consist of multiple Filters. These Filters make up the depth of the neural network model architecture. The following image below shows hows a simple filter works on a image: </p>
 <p align="center">
-<img width="250" src = "images/filters.gif">
+<img width="250" src = "Images/Filters.gif">
 </p>
 
