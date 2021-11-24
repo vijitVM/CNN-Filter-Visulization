@@ -99,3 +99,21 @@ def get_submodel(name):
       model.input, 
       model.get_layer(name).output)
 ```
+
+The Third  and Final Step would be to create the Random Image and then Visulize it, which can be done as follows: 
+```python 
+# create the Image 
+def create_image():
+  return tf.random.uniform((96,96,3))
+
+# Visulize the Image 
+def plot(image, title ='Random Generated Image'):
+  image = image -tf.math.reduce_min(image)
+  image = image / tf.math.reduce_max(image) # scaling the image for values between 0 & 1
+  plt.imshow(image)
+  plt.xticks([])
+  plt.yticks([])
+  plt.title(title)
+  plt.show()
+
+```
