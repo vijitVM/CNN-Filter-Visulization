@@ -98,6 +98,4 @@ def get_submodel(name):
   return tf.keras.models.Model(
       model.input, 
       model.get_layer(name).output)
-
-get_submodel('block2_conv1').summary()
 ```
