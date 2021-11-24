@@ -150,3 +150,64 @@ def filter_visulise(layer_name, filter_index =None, max_iters = 500):
   plot(image, f'{layer_name},{filter_index}')
   ```
 
+##Plotting the Results 
+After we have created our ALogirthm we will now just run it and visulize the output, which can be done as follows: 
+```python 
+
+layer_name = 'block1_conv1' #param [''block1_conv1','block1_conv2', 'block2_conv1', 'block2_conv2', 'block3_conv1', 'block3_conv2', 'block3_conv3', 'block4_conv1', 'block4_conv2', 'block5_conv1', 'block5_conv2', 'block5_conv3']
+filter_visulise(layer_name)
+```
+
+The output would be as follows for a random generated Image: 
+```
+Iteration: 10, Loss : 0.417100
+Iteration: 20, Loss : 0.438312
+Iteration: 30, Loss : 0.459604
+Iteration: 40, Loss : 0.480967
+Iteration: 50, Loss : 0.502391
+Iteration: 60, Loss : 0.523861
+Iteration: 70, Loss : 0.545367
+Iteration: 80, Loss : 0.566900
+Iteration: 90, Loss : 0.588461
+Iteration: 100, Loss : 0.610050
+Iteration: 110, Loss : 0.631658
+Iteration: 120, Loss : 0.653284
+Iteration: 130, Loss : 0.674928
+Iteration: 140, Loss : 0.696581
+Iteration: 150, Loss : 0.718240
+Iteration: 160, Loss : 0.739906
+Iteration: 170, Loss : 0.761580
+Iteration: 180, Loss : 0.783257
+Iteration: 190, Loss : 0.804935
+Iteration: 200, Loss : 0.826616
+Iteration: 210, Loss : 0.848296
+Iteration: 220, Loss : 0.869977
+Iteration: 230, Loss : 0.891657
+Iteration: 240, Loss : 0.913337
+Iteration: 250, Loss : 0.935019
+Iteration: 260, Loss : 0.956702
+Iteration: 270, Loss : 0.978385
+Iteration: 280, Loss : 1.000067
+Iteration: 290, Loss : 1.021750
+Iteration: 300, Loss : 1.043433
+Iteration: 310, Loss : 1.065115
+Iteration: 320, Loss : 1.086798
+Iteration: 330, Loss : 1.108481
+Iteration: 340, Loss : 1.130163
+Iteration: 350, Loss : 1.151846
+Iteration: 360, Loss : 1.173529
+Iteration: 370, Loss : 1.195211
+Iteration: 380, Loss : 1.216894
+Iteration: 390, Loss : 1.238577
+Iteration: 400, Loss : 1.260260
+Iteration: 410, Loss : 1.281942
+Iteration: 420, Loss : 1.303625
+Iteration: 430, Loss : 1.325307
+Iteration: 440, Loss : 1.346990
+Iteration: 450, Loss : 1.368673
+Iteration: 460, Loss : 1.390355
+Iteration: 470, Loss : 1.412038
+Iteration: 480, Loss : 1.433721
+Iteration: 490, Loss : 1.455404
+Iteration: 500, Loss : 1.477086
+```
