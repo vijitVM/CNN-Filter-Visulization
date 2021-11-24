@@ -88,3 +88,6 @@ Trainable params: 14,714,688
 Non-trainable params: 0
 _________________________________________________________________
 ```
+The above summary of the VGG16 Model shows the Input layer and the outup shape of each layer and the total number of parameters. In VGG16 each block comprises of  multiple 2D conv layer followed by a max pooling layer. 
+
+The max pooling layer in CNN basically it selects the maximum value from the feature map that is covered insidea filter. 
