@@ -90,4 +90,4 @@ _________________________________________________________________
 ```
 The above summary of the VGG16 Model shows the Input layer and the outup shape of each layer and the total number of parameters. In VGG16 each block comprises of  multiple 2D conv layer followed by a max pooling layer. 
 
-The max pooling layer in CNN basically it selects the maximum value from the feature map that is covered inside a filter. Each CNN Layer can be accessed using the `layer.name` property. This will yield the output `block#_conv_#` where `#` refers to an interger value. 
+The max pooling layer in CNN basically it selects the maximum value from the feature map that is covered inside a filter. Each CNN Layer can be accessed using the `layer.name` property. This will yield the output `block#_conv#` where `#` refers to an interger value. 
