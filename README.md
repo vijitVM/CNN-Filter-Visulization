@@ -1,2 +1,2 @@
 # Convolutional Neural Network Filter Visulization
-<<hr size="10"/>
+<hr size="5"/>
