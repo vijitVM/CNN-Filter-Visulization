@@ -150,7 +150,7 @@ def filter_visulise(layer_name, filter_index =None, max_iters = 500):
   plot(image, f'{layer_name},{filter_index}')
   ```
 
-##Plotting the Results 
+## Plotting the Results 
 After we have created our ALogirthm we will now just run it and visulize the output, which can be done as follows: 
 ```python 
 
